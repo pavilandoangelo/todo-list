@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-pantone-yellow {
-  background-color: #F5DF4D
+html {
+  scroll-behavior: smooth;
 }
 
-.bg-pantone-ultimate-gray {
-  background-color: #939597;
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-yellow-200
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-200
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-200
 }
