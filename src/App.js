@@ -10,10 +10,9 @@ function App() {
 
   const handleAddTodo = () => {
     const todo = state.todo.trim();
-    if (todo) {
 
+    if (todo) {
       const hasDuplicateTask = state.todoList.filter(task => task === todo);
-      console.log("hasDuplicateTask >>> ", hasDuplicateTask);
       if (hasDuplicateTask.length) {
         return setState({ ...state, duplicateTask: true });
       }
@@ -74,11 +73,11 @@ function App() {
               );
             })}
           </div>
-          <div className="w-full flex flex-col space-y-2 p-2 items-baseline md:flex-row md:space-x-2 md:h-11 lg:flex-row lg:space-x-2 lg:h-11 xl:flex-row xl:space-x-2 xl:h-11 2xl:flex-row 2xl:space-x-2 2xl:h-14 ">
+          <div className="w-full flex flex-col space-y-2 p-2 items-baseline md:flex-row md:space-x-2 md:h-12 lg:flex-row lg:space-x-2 lg:h-14 xl:flex-row xl:space-x-2 xl:h-14 2xl:flex-row 2xl:space-x-2 2xl:h-14">
             <p className="w-full h-full text-center text-md font-normal md:flex-grow md:w-9/12 md:text-left md:text-md lg:flex-grow lg:w-9/12 lg:text-lg xl:flex-grow xl:w-9/12 xl:text-lg 2xl:flex-grow 2xl:w-9/12 2xl:text-left 2xl:text-lg">
-              You have {state.todoList.length} pending tasks
+              You have <span className="font-bold">{state.todoList.length}</span> pending tasks
             </p>
-            <button className="w-full h-full bg-green-500 text-white text-md font-normal rounded-md focus:outline-none focus:ring focus:ring-blue-200 md:flex-initial md:w-3/12 lg:flex-initial lg:w-3/12 xl:flex-initial xl:w-3/12 2xl:flex-initial 2xl:w-3/12" onClick={handleClearAllTodo}>
+            <button className="w-full h-full bg-green-500 text-white text-md p-1 font-normal rounded-md focus:outline-none focus:ring focus:ring-blue-200 md:flex-initial md:w-3/12 lg:flex-initial lg:w-3/12 xl:flex-initial xl:w-3/12 2xl:flex-initial 2xl:w-3/12" onClick={handleClearAllTodo}>
               <span>Clear All</span>
             </button>
           </div>

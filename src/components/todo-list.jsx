@@ -5,7 +5,7 @@ function TodoList(props) {
 
   return (
     <div className="flex flex-row w-full h-8 md:h-10 lg:h-10 xl:h-10 2xl:h-10">
-      <p className="flex-grow h-full w-11/12 bg-white p-2 font-normal tracking-wide whitespace-normal break-all rounded-l-md text-sm md:text-md lg:text-lg xl:text-lg 2xl:text-lg ">
+      <p className="flex-grow h-full w-11/12 bg-white p-2 font-normal tracking-wide whitespace-normal break-all rounded-l-md text-md md:text-lg lg:text-lg xl:text-lg 2xl:text-lg ">
         {todo}
       </p>
       <button className="flex-initial h-full bg-red-500 p-2 focus:outline-none rounded-r-md" onClick={() => handleFinishedTodo(todo)}>
